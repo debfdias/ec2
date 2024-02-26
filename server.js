@@ -28,6 +28,12 @@ app.use("/api/products", (req, res) => {
   })
 });
 
+app.use("/api/hey", (req, res) => {
+  return res.status(200).json({
+    message: 'Hey ho! Lets go!'
+  })
+});
+
 app.use(errorHandler);
 
 const server = app.listen(port, () =>
